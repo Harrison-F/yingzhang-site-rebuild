@@ -1,0 +1,4 @@
+node_modules/
+reference/
+qa/
+.DS_Store

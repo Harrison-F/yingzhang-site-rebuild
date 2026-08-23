@@ -1,0 +1,16 @@
+{
+  "name": "yingzhang-site-rebuild",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Authorized static GitHub Pages snapshot of yingzhang.xyz",
+  "scripts": {
+    "snapshot": "python3 scripts/snapshot.py",
+    "qa": "node scripts/qa.mjs",
+    "qa:interactions": "node scripts/interactions.mjs"
+  },
+  "devDependencies": {
+    "pixelmatch": "^7.1.0",
+    "playwright": "1.62.1",
+    "pngjs": "^7.0.0"
+  }
+}
