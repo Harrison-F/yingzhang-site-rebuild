@@ -15,6 +15,17 @@ const routes = [
   "/8-nyid/",
   "/9-fab9-environment/",
 ];
+const projectCards = [
+  ["./1-2026off", "2026 OSLO FREEDOM FORUM", "/1-2026off"],
+  ["./2-doors-to-freedom", "DOORS TO FREEDOM", "/2-doors-to-freedom"],
+  ["./3-2025off#first-project", "2025 OSLO FREEDOM FORUM", "/3-2025off"],
+  ["./4-tyranny-tracker", "TYRANNY TRACKER", "/4-tyranny-tracker"],
+  ["./5-fab9-brand", "FAB9 BRAND", "/5-fab9-brand"],
+  ["./7-esc-tyranny", "ESC TYRANNY", "/7-esc-tyranny"],
+  ["./6-dicators-laundromat", "DICTATOR'S LAUNDROMAT", "/6-dicators-laundromat"],
+  ["./8-nyid", "NYID", "/8-nyid"],
+  ["./9-fab9-environment", "FAB9 ENVIRONMENT", "/9-fab9-environment"],
+];
 
 const browser = await chromium.launch({ headless: true });
 try {
@@ -27,12 +38,14 @@ try {
     console.log(`PASS route ${route}`);
   }
 
-  await page.goto(origin + "/", { waitUntil: "domcontentloaded" });
-  await page.locator('a[href="./1-2026off"]:visible')
-    .filter({ hasText: "2026 OSLO FREEDOM FORUM" }).first().click();
-  await page.waitForURL((url) => url.pathname.replace(/\/$/, "").endsWith("/1-2026off"));
-  console.log("PASS project-card navigation");
+  for (const [href, title, route] of projectCards) {
+    await page.goto(origin + "/", { waitUntil: "domcontentloaded" });
+    await page.locator(`a[href="${href}"]:visible`).filter({ hasText: title }).first().click();
+    await page.waitForURL((url) => url.pathname.replace(/\/$/, "").endsWith(route));
+    console.log(`PASS project-card navigation ${route}`);
+  }
 
+  await page.goto(origin + "/1-2026off/", { waitUntil: "domcontentloaded" });
   await page.locator("a:visible", { hasText: "PROJECTS" }).first().click();
   await page.waitForURL((url) => url.pathname === "/yingzhang-site-rebuild/" && url.hash === "#work");
   assert.equal(await page.locator("#work").count(), 1);

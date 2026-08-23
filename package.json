@@ -6,7 +6,8 @@
   "scripts": {
     "snapshot": "python3 scripts/snapshot.py",
     "qa": "node scripts/qa.mjs",
-    "qa:interactions": "node scripts/interactions.mjs"
+    "qa:interactions": "node scripts/interactions.mjs",
+    "qa:media": "node scripts/media.mjs"
   },
   "devDependencies": {
     "pixelmatch": "^7.1.0",

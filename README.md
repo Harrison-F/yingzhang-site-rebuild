@@ -20,6 +20,6 @@ python3 -m http.server 4173 --directory ..
 npm run qa
 ```
 
-The QA pass compares all ten source and local routes at desktop and mobile sizes, checks text parity, broken images, horizontal overflow, internal-link rewriting, and screenshot pixel differences.
+The structural QA pass compares all ten source and local routes at desktop and mobile sizes, checks text parity, broken images, horizontal overflow, internal-link rewriting, and screenshot pixel differences. It hides dynamic video and GIF frames so the pixel comparison is deterministic; `npm run qa:media` separately cold-loads the live hero videos and verifies playback.
 
-After deployment, run `npm run qa:interactions` to exercise every public route plus project-card, Projects, About, and Contact navigation on the live Pages origin.
+After deployment, run `npm run qa:interactions` to exercise every public route, all nine project cards, and Projects, About, and Contact navigation on the live Pages origin.
