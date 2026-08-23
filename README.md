@@ -9,7 +9,7 @@ npm install
 npm run snapshot
 ```
 
-The generated HTML preserves the live Framer output, with only origin references and home-fragment links rewritten for GitHub Pages' project-path routing. Large portfolio media remains on Framer's CDN so the published repository stays within GitHub's file-size limits.
+The generated HTML preserves the live Framer output, with only origin references and home-fragment links rewritten for GitHub Pages' project-path routing. A small navigation compatibility hook prevents Framer's client router from dropping the repository prefix after hydration. Large portfolio media remains on Framer's CDN so the published repository stays within GitHub's file-size limits.
 
 ## QA
 

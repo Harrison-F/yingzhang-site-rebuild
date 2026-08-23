@@ -28,8 +28,9 @@ try {
   }
 
   await page.goto(origin + "/", { waitUntil: "domcontentloaded" });
-  await page.locator('a[href="./1-2026off"]:visible').first().click();
-  await page.waitForURL((url) => url.pathname.endsWith("/1-2026off/"));
+  await page.locator('a[href="./1-2026off"]:visible')
+    .filter({ hasText: "2026 OSLO FREEDOM FORUM" }).first().click();
+  await page.waitForURL((url) => url.pathname.replace(/\/$/, "").endsWith("/1-2026off"));
   console.log("PASS project-card navigation");
 
   await page.locator("a:visible", { hasText: "PROJECTS" }).first().click();

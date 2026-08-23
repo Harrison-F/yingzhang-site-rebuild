@@ -49,7 +49,23 @@ def rewrite(html: str, route: str) -> str:
         html = html.replace(f"./#{fragment}", f"{TARGET_ORIGIN}/#{fragment}")
     if route != "/":
         html = html.replace('href="./"', f'href="{TARGET_ORIGIN}/"')
-    return html
+
+    # Framer's client router treats its original root-relative navigation as a
+    # user-site route and can drop the GitHub Pages project prefix after
+    # hydration. Preserve the rewritten DOM destination by handling only links
+    # that explicitly target this Pages site before Framer's router sees them.
+    routing_fix = f'''<script data-github-pages-routing-fix>
+document.addEventListener("click",function(event){{
+  if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  const link=event.target.closest("a[href]");
+  if(!link||!link.href.startsWith("{TARGET_ORIGIN}/"))return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  window.location.assign(link.href);
+}},true);
+</script>
+'''
+    return html.replace("</body>", routing_fix + "</body>")
 
 
 def output_path(route: str) -> Path:

@@ -88,5 +88,15 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
+<script data-github-pages-routing-fix>
+document.addEventListener("click",function(event){
+  if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  const link=event.target.closest("a[href]");
+  if(!link||!link.href.startsWith("https://harrison-f.github.io/yingzhang-site-rebuild/"))return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  window.location.assign(link.href);
+},true);
+</script>
 </body>
 </html>

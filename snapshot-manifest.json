@@ -1,67 +1,67 @@
 {
   "source": "https://yingzhang.xyz",
   "target": "https://harrison-f.github.io/yingzhang-site-rebuild",
-  "fetched_at": "2026-08-23T20:43:34.226272+00:00",
+  "fetched_at": "2026-08-23T21:02:39.145810+00:00",
   "pages": [
     {
       "route": "/",
       "source_sha256": "7b6a4d8d967768b05366f42bec00427332ac85b8afb067718129faa2649ce115",
-      "published_sha256": "71ae94d775e10e7a29487452620f1ccef0fce43a65f92f38f938e36f603ff348",
-      "bytes": 204386
+      "published_sha256": "e5506b296599b78648124cfd57c1ecf9461e44041cca4af7134df0149f8b4043",
+      "bytes": 204852
     },
     {
       "route": "/1-2026off",
       "source_sha256": "e3fe1a0618d0f6f96dd5c2616e5b7fa9a60371965c1f572e5a0c95cccc1c5220",
-      "published_sha256": "569fb6b714c4b0e90d821807c913aec496dd684fa73e3180b22dc3f8eef92eb2",
-      "bytes": 304198
+      "published_sha256": "e6de87781151f716f590c10b0fc2ac775cb63d14cb111d528bd8b7e53e20d662",
+      "bytes": 304664
     },
     {
       "route": "/2-doors-to-freedom",
       "source_sha256": "77dca9366cce7b4c6ac134ab9dd902ef80b51fb8da9cf4bec74573ea1d05fb54",
-      "published_sha256": "187f0526506d054d8b9ec1a59b62d2af48c5b8a4c0b78041186f5044b8acd0af",
-      "bytes": 222858
+      "published_sha256": "002696956a5ddbac2923cca4ee96e3d4cfe051fda4ab3c89bf8823e06f8b57d9",
+      "bytes": 223324
     },
     {
       "route": "/3-2025off",
       "source_sha256": "0dc9bddb7a1e3a0f789295e92d28d4a7d563ae4f62924ad6463abff1c2c8e49b",
-      "published_sha256": "1a03038e80f25af8816aea2b23bd353b9f2f7b98f958f62458af2c11e1f4d3f0",
-      "bytes": 285149
+      "published_sha256": "90a1185e8a892c1fb03bc73c9701b7f2be91828ad424044f633345a1891e9016",
+      "bytes": 285615
     },
     {
       "route": "/4-tyranny-tracker",
       "source_sha256": "9fbfd525a700148075e1668e8917bb5bf15dc098ef5720d4c51ffa3843399d97",
-      "published_sha256": "b912b1edad8c81b97566f83bbfd23d8fa00bed64edd4c3aa2a0743ca3ed641c4",
-      "bytes": 283564
+      "published_sha256": "4478dc5932148dea8b55f72cf706f9c2b2b465117da7cca994330309a050e3f2",
+      "bytes": 284030
     },
     {
       "route": "/5-fab9-brand",
       "source_sha256": "607836c47d53e7c0ab7b72cf5ae375f71421537d979a138538a2d5399c03b2be",
-      "published_sha256": "02d7011845e4face65c52592866333c466afac595a1ac81caffb51e843689023",
-      "bytes": 255017
+      "published_sha256": "4f6e951428bcf01927196456b35bbc25fabfa2cf17fbbe19021221cabd67db4f",
+      "bytes": 255483
     },
     {
       "route": "/6-dicators-laundromat",
       "source_sha256": "1be2963b38e06fbd7a312a2bccf887c788f21515e81be3ddbe6948899d6064a9",
-      "published_sha256": "70f40c1459b84ef63660bd529b534c4066ab09218ef345e76f00307ddce1489e",
-      "bytes": 216017
+      "published_sha256": "58cc8b616771f66d54d4b624d5ccc6a1c62bbd4f7021e876b682e15946035c2b",
+      "bytes": 216483
     },
     {
       "route": "/7-esc-tyranny",
       "source_sha256": "74048dc51e441e9e5a962a5e6f0437d468cd869b06706876f792c4d263234b7b",
-      "published_sha256": "cbdfc8c5d0af34eba8d38b399473d9e7b1d8e86d92aadcbdec3446a16c44f3d9",
-      "bytes": 255824
+      "published_sha256": "40b7b8a3475da068dd9387c8e9d2f91345549c8188f9b95b6001eeb4b55dddb2",
+      "bytes": 256290
     },
     {
       "route": "/8-nyid",
       "source_sha256": "d5adbaeb21572c4ec5702a6c95d8906454525e91448a678c7d6639e97e8fa77f",
-      "published_sha256": "162c5fda34255fa011137905ab977f1de1ef40faf42eaa3b50e1684ccd8a3452",
-      "bytes": 204328
+      "published_sha256": "cc6ee67f1f6b669848ece4100ba18b3bc6dae3c3609adf42a43fbae6224be284",
+      "bytes": 204794
     },
     {
       "route": "/9-fab9-environment",
       "source_sha256": "7313de4711e612f5ac4c0a6e40a2ba793ddb44aac88ec59b8bf34a4eb0d6a883",
-      "published_sha256": "eac2fd908a78980c879c38c218c21b0008d0b6e2d35f3ddaf8495ef466f2d2cc",
-      "bytes": 254663
+      "published_sha256": "f4089e14cbf9d2d0dd7ab1b9d036f04f0f0e0170103cd8cd002806a823619d36",
+      "bytes": 255129
     }
   ],
   "external_asset_count": 207,
