@@ -8,8 +8,6 @@ const heroVideoRoutes = [
   "/3-imagine/",
   "/4-tyranny-tracker/",
   "/5-fab9-brand/",
-  "/6-esc-tyranny/",
-  "/8-nyid/",
 ];
 
 for (const route of heroVideoRoutes) {

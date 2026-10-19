@@ -15,6 +15,18 @@ const routes = [
   "/8-nyid/",
   "/9-fab9-environment/",
 ];
+const routeTitles = {
+  "/": "YING ZHANG — CREATIVE DIRECTOR",
+  "/1-dismantle/": "DISMANTLING DICTATORSHIP ",
+  "/2-doors-to-freedom/": "DOORS TO FREEDOM",
+  "/3-imagine/": "IMAGINE",
+  "/4-tyranny-tracker/": "TYRANNY TRACKER",
+  "/5-fab9-brand/": "YING ZHANG — CREATIVE DIRECTOR",
+  "/6-esc-tyranny/": "ESC TYRANNY",
+  "/7-dictators-laundromat/": "DICTATOR'S LAUNDROMAT",
+  "/8-nyid/": "NYID",
+  "/9-fab9-environment/": "FAB9 ENVIRONMENT",
+};
 const projectCards = [
   ["./1-dismantle", "DISMANTLING DICTATORSHIP", "/1-dismantle"],
   ["./2-doors-to-freedom", "DOORS TO FREEDOM", "/2-doors-to-freedom"],
@@ -33,7 +45,9 @@ try {
   for (const route of routes) {
     const response = await page.goto(origin + route, { waitUntil: "domcontentloaded", timeout: 60000 });
     assert(response?.ok(), `${route}: expected a successful response`);
-    assert.equal(await page.title(), "Multidisciplinary creative director");
+    const actualTitle = (await page.title()).trim();
+    const expectedTitle = routeTitles[route].trim();
+    assert.equal(actualTitle, expectedTitle, `${route}: unexpected page title`);
     assert((await page.locator("body").innerText()).trim().length > 20, `${route}: body text is unexpectedly empty`);
     console.log(`PASS route ${route}`);
   }
@@ -51,7 +65,7 @@ try {
   assert.equal(await page.locator("#work").count(), 1);
   console.log("PASS project-page return navigation");
 
-  for (const [label, hash] of [["ABOUT", "#section-about"], ["CONTACT", "#section-contact"]]) {
+  for (const [label, hash] of [["CONTACT", "#section-contact"], ["PROJECTS", "#work"]]) {
     await page.goto(origin + "/", { waitUntil: "domcontentloaded" });
     await page.locator("a:visible", { hasText: label }).first().click();
     await page.waitForURL((url) => url.hash === hash);
