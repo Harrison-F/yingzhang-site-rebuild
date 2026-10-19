@@ -5,24 +5,24 @@ import { chromium } from "playwright";
 const origin = (process.env.SITE_ORIGIN || "https://harrison-f.github.io/yingzhang-site-rebuild").replace(/\/$/, "");
 const routes = [
   "/",
-  "/1-2026off/",
+  "/1-dismantle/",
   "/2-doors-to-freedom/",
-  "/3-2025off/",
+  "/3-imagine/",
   "/4-tyranny-tracker/",
   "/5-fab9-brand/",
-  "/6-dicators-laundromat/",
-  "/7-esc-tyranny/",
+  "/6-esc-tyranny/",
+  "/7-dictators-laundromat/",
   "/8-nyid/",
   "/9-fab9-environment/",
 ];
 const projectCards = [
-  ["./1-2026off", "2026 OSLO FREEDOM FORUM", "/1-2026off"],
+  ["./1-dismantle", "DISMANTLING DICTATORSHIP", "/1-dismantle"],
   ["./2-doors-to-freedom", "DOORS TO FREEDOM", "/2-doors-to-freedom"],
-  ["./3-2025off#first-project", "2025 OSLO FREEDOM FORUM", "/3-2025off"],
+  ["./3-imagine#first-project", "IMAGINE", "/3-imagine"],
   ["./4-tyranny-tracker", "TYRANNY TRACKER", "/4-tyranny-tracker"],
   ["./5-fab9-brand", "FAB9 BRAND", "/5-fab9-brand"],
-  ["./7-esc-tyranny", "ESC TYRANNY", "/7-esc-tyranny"],
-  ["./6-dicators-laundromat", "DICTATOR'S LAUNDROMAT", "/6-dicators-laundromat"],
+  ["./6-esc-tyranny", "ESC TYRANNY", "/6-esc-tyranny"],
+  ["./7-dictators-laundromat", "DICTATOR'S LAUNDROMAT", "/7-dictators-laundromat"],
   ["./8-nyid", "NYID", "/8-nyid"],
   ["./9-fab9-environment", "FAB9 ENVIRONMENT", "/9-fab9-environment"],
 ];
@@ -45,7 +45,7 @@ try {
     console.log(`PASS project-card navigation ${route}`);
   }
 
-  await page.goto(origin + "/1-2026off/", { waitUntil: "domcontentloaded" });
+  await page.goto(origin + "/1-dismantle/", { waitUntil: "domcontentloaded" });
   await page.locator("a:visible", { hasText: "PROJECTS" }).first().click();
   await page.waitForURL((url) => url.pathname === "/yingzhang-site-rebuild/" && url.hash === "#work");
   assert.equal(await page.locator("#work").count(), 1);

@@ -4,10 +4,12 @@ import { chromium } from "playwright";
 
 const origin = (process.env.SITE_ORIGIN || "https://harrison-f.github.io/yingzhang-site-rebuild").replace(/\/$/, "");
 const heroVideoRoutes = [
-  "/1-2026off/",
-  "/3-2025off/",
+  "/1-dismantle/",
+  "/3-imagine/",
   "/4-tyranny-tracker/",
   "/5-fab9-brand/",
+  "/6-esc-tyranny/",
+  "/8-nyid/",
 ];
 
 for (const route of heroVideoRoutes) {

@@ -15,13 +15,13 @@ TARGET_ORIGIN = "https://harrison-f.github.io/yingzhang-site-rebuild"
 ROOT = Path(__file__).resolve().parents[1]
 ROUTES = (
     "/",
-    "/1-2026off",
+    "/1-dismantle",
     "/2-doors-to-freedom",
-    "/3-2025off",
+    "/3-imagine",
     "/4-tyranny-tracker",
     "/5-fab9-brand",
-    "/6-dicators-laundromat",
-    "/7-esc-tyranny",
+    "/6-esc-tyranny",
+    "/7-dictators-laundromat",
     "/8-nyid",
     "/9-fab9-environment",
 )

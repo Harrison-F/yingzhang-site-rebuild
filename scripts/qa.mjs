@@ -7,13 +7,13 @@ import { PNG } from "pngjs";
 
 const routes = [
   ["home", "/"],
-  ["1-2026off", "/1-2026off/"],
+  ["1-dismantle", "/1-dismantle/"],
   ["2-doors-to-freedom", "/2-doors-to-freedom/"],
-  ["3-2025off", "/3-2025off/"],
+  ["3-imagine", "/3-imagine/"],
   ["4-tyranny-tracker", "/4-tyranny-tracker/"],
   ["5-fab9-brand", "/5-fab9-brand/"],
-  ["6-dicators-laundromat", "/6-dicators-laundromat/"],
-  ["7-esc-tyranny", "/7-esc-tyranny/"],
+  ["6-esc-tyranny", "/6-esc-tyranny/"],
+  ["7-dictators-laundromat", "/7-dictators-laundromat/"],
   ["8-nyid", "/8-nyid/"],
   ["9-fab9-environment", "/9-fab9-environment/"],
 ];
